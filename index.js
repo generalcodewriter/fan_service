@@ -2,13 +2,55 @@ const fs = require('fs');
 const dns = require('dns');
 const { spawn } = require('child_process');
 
+var report = {};
 
-function read(ownerShipDocument,andParseToObject) {
+let USA_LIST = {US, USA, AMERICA, AZ, CA, FL, TX, AR, 
+
+var scan = {};
+scan.list = {};
+scan.domains = {};
+scan.ipOwnership = {};
+scan.locations = {};
+
+scan.convert = (documentAtPath, toTargetList, byNewlineCharacter, andFieldSeparator) => {
 	// read in document.
+	fs.readFile(inDocumentAtPath, (err, data) => {
+		if(err) {
+			console.log(err);
+		}
+	});
 }
 
-function if_pipe(char){
-	if(char typeof Char || char instanceof Char){
-		return true;
-	}
+scan.readTargetList = () => {
+}
+
+scan.generateReport = () => {
+	// TODO generate a markdown based report.	
+}
+
+scan.asyncWhois = (thisTarget) => {
+	
+}
+
+scan.traceroute = (thisTarget) => {
+
+}
+
+scan.nmap = (thisTarget) => {
+
+}
+
+scan.makeNewDirectory = (atPath, withNameforDomain) => {
+	
+}
+
+scan.addFile = (withName, toDirectory) => {
+	
+}
+
+scan.syncIsIpAddress = (stingToTest) => {
+
+}
+
+scan.syncIsDomain = (stringToTest) => {
 }
