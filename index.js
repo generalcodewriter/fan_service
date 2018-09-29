@@ -4,19 +4,24 @@ const { spawn } = require('child_process');
 
 var report = {};
 
-let USA_LIST = {US, USA, AMERICA, AZ, CA, FL, TX, AR, 
+let USA_LIST = {"US", "USA", "AMERICA", "AZ", "CA", "FL", "TX", "AR"}
+let USA_ZIP_CODE_RANGES = {};
 
 var scan = {};
 scan.list = {};
 scan.domains = {};
 scan.ipOwnership = {};
 scan.locations = {};
+scan.entities = {};
 
 scan.convert = (documentAtPath, toTargetList, byNewlineCharacter, andFieldSeparator) => {
 	// read in document.
 	fs.readFile(inDocumentAtPath, (err, data) => {
 		if(err) {
 			console.log(err);
+		}
+		if(data) {
+			console.log("yay!");
 		}
 	});
 }
@@ -36,15 +41,27 @@ scan.traceroute = (thisTarget) => {
 
 }
 
-scan.nmap = (thisTarget) => {
+function addReport(withName, toDirectory) {
 
 }
 
-scan.makeNewDirectory = (atPath, withNameforDomain) => {
+scan.nmap = (thisTarget, andAddReportToDirectoryCallback) => {
+
+}
+
+scan.nikto = (thisTarget) => {
+
+}
+
+scan.wpscan = (thisTarget) => {
+
+}
+
+scan.makeNewDirectory = (atPath, withNameforTarget) => {
 	
 }
 
-scan.addFile = (withName, toDirectory) => {
+scan.addFile = (withName, toTargetDirectory) => {
 	
 }
 
@@ -54,3 +71,9 @@ scan.syncIsIpAddress = (stingToTest) => {
 
 scan.syncIsDomain = (stringToTest) => {
 }
+
+scan.ifThereIsARedirectionToExistingTarget = (fromThisTarget, appendToPreviousTargetRedirectsReportCallback) => {
+
+}
+
+
