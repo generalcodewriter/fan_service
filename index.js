@@ -10,7 +10,7 @@ let IP_REGEX = /\b(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]?[0-9])\.(25[0-5]|2[0-4]
 
 
 var scan = {};
-scan.list = {};
+scan.targetList = {};
 scan.domainsList = {};
 scan.ipAddressesList = {};
 scan.locations = {};
@@ -29,6 +29,7 @@ scan.convert = (documentAtPath, toTargetList, byNewlineCharacter, andFieldSepara
 }
 
 scan.readTargetList = () => {
+
 }
 
 scan.generateReport = () => {
@@ -72,10 +73,13 @@ scan.syncIsIpAddress = (stingToTest) => {
 }
 
 scan.syncIsDomain = (stringToTest) => {
+
 }
 
 scan.ifThereIsARedirectionToExistingTarget = (fromThisTarget, appendToPreviousTargetRedirectsReportCallback) => {
 
 }
 
+scan.investigateDomain(target) {
 
+}
