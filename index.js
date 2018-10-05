@@ -4,13 +4,15 @@ const { spawn } = require('child_process');
 
 var report = {};
 
-let USA_LIST = {"US", "USA", "AMERICA", "AZ", "CA", "FL", "TX", "AR"}
-let USA_ZIP_CODE_RANGES = {};
+let STATE_CODE_REGEX = /[ACDFGHIKLMNOPRSTUVW][LKSZRAOTECMUIDNYHVJPX]/
+let USA_ZIP_CODE_REGEX = /^[0-9]{5}(-[0-9]{4})?$/
+let IP_REGEX = /\b(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]?[0-9])\b/
+
 
 var scan = {};
 scan.list = {};
-scan.domains = {};
-scan.ipOwnership = {};
+scan.domainsList = {};
+scan.ipAddressesList = {};
 scan.locations = {};
 scan.entities = {};
 
