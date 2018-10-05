@@ -60,6 +60,10 @@ scan.wpscan = (thisTarget) => {
 
 }
 
+scan.resolveIp = (thisTarget) => {
+
+}
+
 scan.makeNewDirectory = (atPath, withNameforTarget) => {
 	
 }
